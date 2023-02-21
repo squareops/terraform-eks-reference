@@ -88,12 +88,12 @@ module "eks_bootstrap" {
   excluded_karpenter_ec2_instance_type          = ["nano", "micro", "small"]
   velero_config = {
     enable_velero            = false
-    slack_token              = "xoxb-379541400966-4559734786594-t8iuWRLN9ug3FTpaOqa7y7zI"
-    slack_channel_name       = "skaf-demo-notifications"
+    slack_token              = "abcd-xyzuWRLN9ug3FTpaOqa7skaf"
+    slack_channel_name       = "skaf-notifications"
     retention_period_in_days = 45
     namespaces               = ""
     schedule_cron_time       = "* 1 * * *"
     velero_backup_name       = "clusterback"
-    backup_bucket_name       = "msa-base-271251951598-cluster-backup"
+    backup_bucket_name       = "msa-base-skaf-test-backup"
   }
 }
