@@ -31,7 +31,7 @@ The module can be used to create a new VPC or use an existing one, along with it
 
 The [squareops/vpc/aws](https://registry.terraform.io/modules/squareops/eks/aws/latest) module offers a range of configuration options, including the ability to specify CIDR blocks for VPC and subnet ranges, assign names to VPC resources, enable DNS support, and configure NAT gateways. Additionally, the module provides pre-configured modules for creating subnets with different availability zones, route tables, and security groups.
 
-By using this module, AWS users can save time and effort in setting up VPC infrastructure, and ensure that their VPCs are created in a consistent and reproducible manner. The module is open source and maintained by SquareOps, a consulting company that specializes in cloud infrastructure and DevOps automation.
+By using this module, AWS users can save time and effort in setting up VPC infrastructure, and ensure that their VPCs are created in a consistent and reproducible manner. The module is open source and maintained by [SquareOps](https://squareops.com/), a consulting company that specializes in cloud infrastructure and DevOps automation.
 
 ## EKS
 
@@ -41,7 +41,7 @@ The module provides a simplified and standardized way to create and manage the K
 
 The [squareops/eks/aws](https://registry.terraform.io/modules/squareops/eks/aws/latest) module offers a range of configuration options, such as the ability to specify the number of worker nodes, instance types, and desired capacity. It also provides pre-configured modules for configuring worker node groups with different instance types, adding custom tags, and setting up the Kubernetes metrics server.
 
-By using this module, AWS users can set up a Kubernetes cluster on EKS in a simple, efficient, and reproducible manner. It also ensures that the EKS cluster is created with the best practices in mind, and that it is secured according to industry standards. The module is open source and maintained by SquareOps, a consulting company that specializes in cloud infrastructure and DevOps automation.
+By using this module, AWS users can set up a Kubernetes cluster on EKS in a simple, efficient, and reproducible manner. It also ensures that the EKS cluster is created with the best practices in mind, and that it is secured according to industry standards. The module is open source and maintained by [SquareOps](https://squareops.com/), a consulting company that specializes in cloud infrastructure and DevOps automation.
 
 ## EKS-BOOTSTRAP
 
@@ -49,4 +49,4 @@ The [squareops/eks-bootstrap/aws](https://registry.terraform.io/modules/squareop
 
 The module provides a simplified and standardized way to create the Kubernetes worker nodes in EKS, and to deploy the necessary add-ons and configurations to run Kubernetes workloads. It automates the process of creating the necessary EKS resources. 
 
-By using this module, AWS users can save time and ensure that their Kubernetes workloads are deployed in a consistent and reproducible manner. It also ensures that the EKS cluster is created with the best practices in mind, and that it is secured according to industry standards. The module is open source and maintained by SquareOps, a consulting company that specializes in cloud infrastructure and DevOps automation.
+By using this module, AWS users can save time and ensure that their Kubernetes workloads are deployed in a consistent and reproducible manner. It also ensures that the EKS cluster is created with the best practices in mind, and that it is secured according to industry standards. The module is open source and maintained by [SquareOps](https://squareops.com/), a consulting company that specializes in cloud infrastructure and DevOps automation.
