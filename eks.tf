@@ -12,7 +12,7 @@ module "eks" {
   name                                 = local.name
   vpc_id                               = module.vpc.vpc_id
   environment                          = local.environment
-  kms_key_arn                          = "arn:aws:kms:us-east-2:271251951598:key/2e29f400-a4cc-4bae-9b2e-362084988946"
+  kms_key_arn                          = ""
   cluster_version                      = "1.23"
   cluster_log_types                    = ["api", "scheduler"]
   cluster_log_retention_in_days        = 30
@@ -37,7 +37,7 @@ module "managed_node_group_production" {
   desired_size           = 1
   subnet_ids             = [module.vpc.private_subnets[0]]
   environment            = local.environment
-  kms_key_arn            = "arn:aws:kms:us-east-2:271251951598:key/2e29f400-a4cc-4bae-9b2e-362084988946"
+  kms_key_arn            = ""
   capacity_type          = "SPOT"
   instance_types         = ["t3a.large", "t2.large", "t2.xlarge", "t3.large", "m5.large"]
   kms_policy_arn         = module.eks.kms_policy_arn
@@ -58,7 +58,7 @@ module "managed_node_group_production" {
   name                          = local.name
   vpc_id                        = module.vpc.vpc_id
   environment                   = local.environment
-  kms_key_arn                   = "arn:aws:kms:us-east-2:271251951598:key/2e29f400-a4cc-4bae-9b2e-362084988946"
+  kms_key_arn                   = ""
   keda_enabled                  = true
   istio_enabled                 = false
   kms_policy_arn                = module.eks.kms_policy_arn ## eks module will create kms_policy_arn
@@ -91,12 +91,12 @@ module "managed_node_group_production" {
   velero_enabled                                = true
   velero_config = {
     namespaces                      = "" ## If you want full cluster backup, leave it blank else provide namespace.
-    slack_notification_token        = "xoxb-379541400966-4559734786594-qQ8486bluEuvmxrYxRatsM8R"
-    slack_notification_channel_name = "skaf-demo-notifications"
+    slack_notification_token        = "4559734786594-qQ8486bluEuvmxrYxRatsM8R"
+    slack_notification_channel_name = "demo-notifications"
     retention_period_in_days        = 45
     schedule_backup_cron_time       = "* 1 * * *"
     velero_backup_name              = "clusterback"
-    backup_bucket_name              = "velero-backup-abhi-dev91"
+    backup_bucket_name              = "velero-backup"
   }
 
 }  
