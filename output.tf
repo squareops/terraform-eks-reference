@@ -55,7 +55,7 @@ output "cluster_security_group_id" {
 
 output "cluster_arn" {
   description = "Name of the kubeconfig context"
-  value       = module.eks.kubeconfig_context_name
+  value       = module.eks.cluster_arn
 }
 
 output "cluster_oidc_issuer_url" {
