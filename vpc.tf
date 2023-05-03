@@ -8,7 +8,7 @@ locals {
     Department = "Engineering"
   }
   vpc_cidr           = "172.10.0.0/16"
-  vpn_server_enabled = true
+  vpn_server_enabled = false
 }
 
 module "key_pair_vpn" {
