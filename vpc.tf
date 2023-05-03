@@ -10,8 +10,6 @@ locals {
   vpc_cidr = "172.10.0.0/16"
 }
 
-data "aws_availability_zones" "available" {}
-
 module "key_pair_vpn" {
   source             = "squareops/keypair/aws"
   version            = "1.0.2"
