@@ -1,4 +1,4 @@
- module "key_pair_eks" {
+module "key_pair_eks" {
   source             = "squareops/keypair/aws"
   version            = "1.0.2"
   key_name           = format("%s-%s-eks", local.environment, local.name)
@@ -52,7 +52,7 @@ module "managed_node_group_production" {
 
 
 
- module "eks_bootstrap" {
+module "eks_bootstrap" {
   source                        = "squareops/eks-bootstrap/aws"
   version                       = "1.1.0"
   name                          = local.name
@@ -61,7 +61,7 @@ module "managed_node_group_production" {
   kms_key_arn                   = ""
   keda_enabled                  = true
   istio_enabled                 = false
-  kms_policy_arn                = module.eks.kms_policy_arn         # eks module will create kms_policy_arn
+  kms_policy_arn                = module.eks.kms_policy_arn # eks module will create kms_policy_arn
   eks_cluster_name              = module.eks.cluster_name
   reloader_enabled              = true
   karpenter_enabled             = true
@@ -90,7 +90,7 @@ module "managed_node_group_production" {
   cert_manager_install_letsencrypt_http_issuers = true
   velero_enabled                                = true
   velero_config = {
-    namespaces                      = ""        # If you want full cluster backup, leave it blank else provide namespace.
+    namespaces                      = "" # If you want full cluster backup, leave it blank else provide namespace.
     slack_notification_token        = "4559734786594-qQ8486bluEuvmxrYxRatsM8R"
     slack_notification_channel_name = "demo-notifications"
     retention_period_in_days        = 45
