@@ -2,7 +2,7 @@
 ## Requirements and Prerequisites
 
 1. An AWS account
-2. A system with [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) and [kubectl](https://kubernetes.io/docs/tasks/tools/) installed
+2. A system with [terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) and [kubectl](https://kubernetes.io/docs/tasks/tools/) installed
 
 This repository contains Terraform configuration files for deploying a set of modules in a specific order. The tfstate module must be deployed first, followed by main module.
 
