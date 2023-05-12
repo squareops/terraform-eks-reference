@@ -7,12 +7,12 @@ locals {
     Expires    = "Never"
     Department = "Engineering"
   }
-  vpc_cidr = "172.10.0.0/16"
+  vpc_cidr           = "172.10.0.0/16"
+  vpn_server_enabled = false
 }
 
-data "aws_availability_zones" "available" {}
-
 module "key_pair_vpn" {
+  count              = local.vpn_server_enabled ? 1 : 0
   source             = "squareops/keypair/aws"
   version            = "1.0.2"
   environment        = local.environment
@@ -27,9 +27,9 @@ module "vpc" {
   vpc_cidr                                        = local.vpc_cidr
   environment                                     = local.environment
   flow_log_enabled                                = true
-  vpn_key_pair_name                               = module.key_pair_vpn.key_pair_name
+  vpn_key_pair_name                               = local.vpn_server_enabled ? module.key_pair_vpn[0].key_pair_name : null
+  vpn_server_enabled                              = local.vpn_server_enabled
   availability_zones                              = 2
-  vpn_server_enabled                              = false
   intra_subnet_enabled                            = true
   public_subnet_enabled                           = true
   private_subnet_enabled                          = true
