@@ -1,3 +1,6 @@
+## Terraform EKS Reference
+
+Terraform reference to deploy a production ready EKS cluster. This reference takes care of provisioning a secure VPC network with VPN , deploy an EKS cluster and configure it with required resources,controllers and utilities to start deploying applications.
 
 ## Requirements and Prerequisites
 

@@ -1,7 +1,3 @@
-provider "aws" {
-  region = local.region
-}
-
 locals {
   name        = "tfstate"
   region      = "us-east-2"

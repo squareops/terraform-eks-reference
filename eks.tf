@@ -12,7 +12,7 @@ module "eks" {
   name                                 = local.name
   vpc_id                               = module.vpc.vpc_id
   environment                          = local.environment
-  cluster_version                      = "1.23"
+  cluster_version                      = "1.24"
   kms_key_arn                          = ""
   cluster_log_types                    = ["api", "scheduler"]
   cluster_log_retention_in_days        = 30
