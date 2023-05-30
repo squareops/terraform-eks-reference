@@ -4,32 +4,32 @@ output "vpc_id" {
 }
 
 output "vpc_cidr_block" {
-  description = "AWS Region"
+  description = "The CIDR block of VPC"
   value       = module.vpc.vpc_cidr_block
 }
 
 output "public_subnets" {
-  description = "List of IDs of public subnets"
+  description = "List of IDs of Public Subnets"
   value       = module.vpc.public_subnets
 }
 
 output "private_subnets" {
-  description = "List of IDs of private subnets"
+  description = "List of IDs of Private Subnets"
   value       = module.vpc.private_subnets
 }
 
 output "database_subnets" {
-  description = "List of IDs of database subnets"
+  description = "List of IDs of Database Subnets"
   value       = module.vpc.database_subnets
 }
 
 output "intra_subnets" {
-  description = "List of IDs of Intra subnets"
+  description = "List of IDs of Intra Subnets"
   value       = module.vpc.intra_subnets
 }
 
 output "vpn_host_public_ip" {
-  description = "IP Adress of VPN Server"
+  description = "Public IP Adress of VPN Server"
   value       = module.vpc.vpn_host_public_ip
 }
 
@@ -39,23 +39,18 @@ output "vpn_security_group" {
 }
 
 output "cluster_name" {
-  description = "Kubernetes Cluster Name"
+  description = "EKS Cluster Name"
   value       = module.eks.cluster_name
 }
 
 output "cluster_endpoint" {
-  description = "Endpoint for EKS control plane"
+  description = "Endpoint for EKS Control Plane"
   value       = module.eks.cluster_endpoint
 }
 
 output "cluster_security_group_id" {
-  description = "Security group ids attached to the cluster control plane"
+  description = "Security group IDs attached to the cluster control plane"
   value       = module.eks.cluster_security_group_id
-}
-
-output "cluster_arn" {
-  description = "Name of the kubeconfig context"
-  value       = module.eks.cluster_arn
 }
 
 output "cluster_oidc_issuer_url" {
@@ -83,12 +78,7 @@ output "nginx_ingress_controller_dns_hostname" {
   value       = module.eks_bootstrap.nginx_ingress_controller_dns_hostname
 }
 
-output "ebs_encryption" {
-  description = "Is AWS EBS encryption is enabled or not?"
-  value       = "Encrypted by default"
-}
-
 output "efs_id" {
   value       = module.eks_bootstrap.efs_id
-  description = "EFS ID"
+  description = "The ID of the EFS"
 }
