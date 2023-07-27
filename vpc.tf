@@ -1,7 +1,7 @@
 locals {
   region      = "us-east-2"
-  environment = "prod"
-  name        = "vpc"
+  environment = "test"
+  name        = "eks-ref"
   additional_aws_tags = {
     Owner      = "organization_name"
     Expires    = "Never"
@@ -22,7 +22,7 @@ module "key_pair_vpn" {
 
 module "vpc" {
   source                                          = "squareops/vpc/aws"
-  version                                         = "2.1.0"
+  version                                         = "3.2.0"
   name                                            = local.name
   vpc_cidr                                        = local.vpc_cidr
   environment                                     = local.environment
