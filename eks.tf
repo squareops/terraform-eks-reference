@@ -14,7 +14,7 @@ module "eks" {
   vpc_id                               = module.vpc.vpc_id
   environment                          = local.environment
   cluster_version                      = "1.26"
-  kms_key_arn                          = "arn:aws:kms:us-east-2:271251951598:key/d7485321-ad5a-4e13-8dfa-3552c7c2c256"
+  kms_key_arn                          = ""
   cluster_log_types                    = ["api", "scheduler"]
   private_subnet_ids                   = module.vpc.private_subnets
   cluster_log_retention_in_days        = 30
@@ -23,27 +23,17 @@ module "eks" {
   create_aws_auth_configmap            = true
   aws_auth_users = [
     {
-      userarn  = "arn:aws:iam::271251951598:user/ankur-aws-skaf"
-      username = "ankur-aws-skaf"
+      userarn  = "arn:aws:iam::272222598:user/name"
+      username = "name"
       groups   = ["system:masters"]
     },
     {
-      userarn  = "arn:aws:iam::271251951598:user/aditya-aws-skaf"
-      username = "aditya-aws-skaf"
+      userarn  = "arn:aws:iam::272222598:user/name"
+      username = "name"
       groups   = ["system:masters"]
     }
   ]
 }
-
-# data "aws_eks_cluster" "cluster" {
-#   depends_on  = [ module.eks ]
-#   name = module.eks.cluster_name
-# }
-
-# data "aws_eks_cluster_auth" "cluster" {
-#   depends_on  = [ module.eks ]
-#   name = module.eks.cluster_name
-# }
 
 module "managed_node_group_production" {
   source                 = "squareops/eks/aws//modules/managed-nodegroup"
@@ -59,9 +49,10 @@ module "managed_node_group_production" {
   min_size               = 1
   max_size               = 3
   desired_size           = 1
+  ipv6_enabled           = true
   capacity_type          = "SPOT"
   instance_types         = ["t3a.large", "t2.large", "t2.xlarge", "t3.large", "m5.large"]
-  kms_key_arn            = "arn:aws:kms:us-east-2:271251951598:key/d7485321-ad5a-4e13-8dfa-3552c7c2c256"
+  kms_key_arn            = ""
   k8s_labels = {
     "Infra-Services" = "true"
   }

@@ -1,19 +1,21 @@
 locals {
   region      = "us-east-2"
-  environment = "test"
-  name        = "eks-ref"
+  environment = "prod"
+  name        = "skaf"
   additional_aws_tags = {
     Owner      = "organization_name"
     Expires    = "Never"
     Department = "Engineering"
   }
+  ipv6_enabled = true
 }
 
 data "terraform_remote_state" "eks" {
-  backend = "local"
-
+  backend = "s3"
   config = {
-    path = "../terraform.tfstate"
+    region = "us-east-2"
+    bucket = "eks-ref-bucket"
+    key   = "eks/terraform.tfstate"
   }
 }
 
@@ -32,15 +34,15 @@ module "eks_bootstrap" {
   environment                                   = local.environment
   eks_cluster_name                              = data.terraform_remote_state.eks.outputs.cluster_name
   vpc_id                                        = data.terraform_remote_state.eks.outputs.vpc_id
-  ipv6_enabled                                  = false
-  kms_key_arn                                   = "arn:aws:kms:us-east-2:271251951598:key/d7485321-ad5a-4e13-8dfa-3552c7c2c256"
+  ipv6_enabled                                  = local.ipv6_enabled
+  kms_key_arn                                   = ""
   worker_iam_role_name                          = data.terraform_remote_state.eks.outputs.worker_iam_role_name
   worker_iam_role_arn                           = data.terraform_remote_state.eks.outputs.worker_iam_role_arn
   kms_policy_arn                                = data.terraform_remote_state.eks.outputs.kms_policy_arn # eks module will create kms_policy_arn
   keda_enabled                                  = true
   reloader_enabled                              = true
   private_subnet_ids                            = data.terraform_remote_state.eks.outputs.private_subnets
-  metrics_server_enabled                        = false
+  metrics_server_enabled                        = true
   external_secrets_enabled                      = true
   amazon_eks_vpc_cni_enabled                    = true
   service_monitor_crd_enabled                   = true
@@ -73,11 +75,12 @@ module "eks_bootstrap" {
     prometheus_monitoring_enabled       = true
     cert_manager_cluster_issuer_enabled = true
   }
-  karpenter_provisioner_enabled = false
+  karpenter_provisioner_enabled = true
   karpenter_provisioner_config = {
     private_subnet_name    = format("%s-%s-private-subnet", local.environment, local.name)
     instance_capacity_type = ["spot"]
     excluded_instance_type = ["nano", "micro", "small"]
+    instance_hypervisor    = ["nitro"]
   }
   velero_enabled = false
   velero_config = {
