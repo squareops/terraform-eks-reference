@@ -18,7 +18,7 @@
   <head>
     <title>Infracost cost report</title>
     <style>
-      
+
 body {
   margin: 0;
   padding: 0.5rem 1rem;
@@ -152,1014 +152,1014 @@ iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAMAAABlApw1AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7O
       </ul>
     </div>
 
-    
 
-    
-      
-      
-  
+
+
+
+
+
   <p class="project-name">Project: squareops/terraform-eks-reference</p>
   <table class="breakdown">
     <thead>
-      
+
   <th class="name">Name</th>
-  
+
     <td class="monthly-quantity">Monthly Qty</td>
-  
-  
+
+
     <td class="unit">Unit</td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost">Monthly Cost</td>
-  
+
 
     </thead>
     <tbody>
-      
-        
-  
+
+
+
   <tr class="resource top-level">
     <td class="name">
-      
-      
+
+
       module.eks.module.eks.aws_cloudwatch_log_group.this[0]
     </td>
-    
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
   </tr>
-  
+
     <tr class="tags">
       <td class="name">
-        
-        
-          
-          
-        
-          
-          
-        
+
+
+
+
+
+
+
+
         <span class="label">Tags:</span>
         <span>Environment=prod, Name=prod-skaf</span>
       </td>
-      
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
     </tr>
-  
-  
-  
-    
+
+
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       Data ingested
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.50 per GB</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       Archival Storage
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.03 per GB</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       Insights queries data scanned
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.005 per GB</td>
-    
+
   </tr>
 
-  
-  
 
-      
-        
-  
+
+
+
+
+
   <tr class="resource top-level">
     <td class="name">
-      
-      
+
+
       module.eks.module.eks.aws_eks_cluster.this[0]
     </td>
-    
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
   </tr>
-  
+
     <tr class="tags">
       <td class="name">
-        
-        
-          
-          
-        
-          
-          
-        
+
+
+
+
+
+
+
+
         <span class="label">Tags:</span>
         <span>Environment=prod, Name=prod-skaf</span>
       </td>
-      
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
     </tr>
-  
-  
-  
-    
+
+
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       EKS cluster
     </td>
-    
-      
+
+
         <td class="monthly-quantity">730</td>
-      
-      
+
+
         <td class="unit">hours</td>
-      
-      
-      
-      
+
+
+
+
         <td class="monthly-cost">$73.00</td>
-      
-    
+
+
   </tr>
 
-  
-  
 
-      
-        
-  
+
+
+
+
+
   <tr class="resource top-level">
     <td class="name">
-      
-      
+
+
       module.eks_bootstrap.module.k8s_addons.module.aws_node_termination_handler[0].aws_sqs_queue.aws_node_termination_handler_queue
     </td>
-    
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
   </tr>
-  
-  
-  
-    
+
+
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       Requests
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.40 per 1M requests</td>
-    
+
   </tr>
 
-  
-  
 
-      
-        
-  
+
+
+
+
+
   <tr class="resource top-level">
     <td class="name">
-      
-      
+
+
       module.eks_bootstrap.module.velero[0].aws_lambda_function.delete_snapshot
     </td>
-    
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
   </tr>
-  
-  
-  
-    
+
+
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       Requests
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.20 per 1M requests</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       Duration
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.0000166667 per GB-seconds</td>
-    
+
   </tr>
 
-  
-  
 
-      
-        
-  
+
+
+
+
+
   <tr class="resource top-level">
     <td class="name">
-      
-      
+
+
       module.eks_bootstrap.module.velero[0].aws_s3_bucket_lifecycle_configuration.velero_bucket_policy
     </td>
-    
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
   </tr>
-  
-  
-  
-    
+
+
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       Object tagging
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.01 per 10k tags</td>
-    
+
   </tr>
 
-  
-  
-    
-  
+
+
+
+
   <tr class="resource">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       Standard
     </td>
-    
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
   </tr>
-  
-  
-  
-    
+
+
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       Storage
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.023 per GB</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       PUT, COPY, POST, LIST requests
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.005 per 1k requests</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       GET, SELECT, and all other requests
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.0004 per 1k requests</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       Select data scanned
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.002 per GB</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       Select data returned
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.0007 per GB</td>
-    
+
   </tr>
 
-  
-  
 
-  
-    
-  
+
+
+
+
+
   <tr class="resource">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       Standard - infrequent access
     </td>
-    
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
   </tr>
-  
-  
-  
-    
+
+
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       Storage
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.0125 per GB</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       PUT, COPY, POST, LIST requests
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.01 per 1k requests</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       GET, SELECT, and all other requests
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.001 per 1k requests</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       Lifecycle transition
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.00 per 1k requests</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       Retrievals
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.01 per GB</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       Select data scanned
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.002 per GB</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       Select data returned
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.01 per GB</td>
-    
+
   </tr>
 
-  
-  
 
-  
 
-      
-        
-  
+
+
+
+
+
+
   <tr class="resource top-level">
     <td class="name">
-      
-      
+
+
       module.managed_node_group_production.aws_eks_node_group.managed_ng
     </td>
-    
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
   </tr>
-  
+
     <tr class="tags">
       <td class="name">
-        
-        
-          
-          
-        
-          
-          
-        
+
+
+
+
+
+
+
+
         <span class="label">Tags:</span>
         <span>Environment=prod, Name=prod-Infra-ng</span>
       </td>
-      
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
     </tr>
-  
-  
-  
-  
-    
-  
+
+
+
+
+
+
   <tr class="resource">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       module.managed_node_group_production.aws_launch_template.eks_template
     </td>
-    
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
   </tr>
-  
-  
-  
-    
+
+
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       Instance usage (Linux/UNIX, on-demand, t3a.large)
     </td>
-    
-      
+
+
         <td class="monthly-quantity">730</td>
-      
-      
+
+
         <td class="unit">hours</td>
-      
-      
-      
-      
+
+
+
+
         <td class="monthly-cost">$54.90</td>
-      
-    
+
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       EC2 detailed monitoring
     </td>
-    
-      
+
+
         <td class="monthly-quantity">7</td>
-      
-      
+
+
         <td class="unit">metrics</td>
-      
-      
-      
-      
+
+
+
+
         <td class="monthly-cost">$2.10</td>
-      
-    
+
+
   </tr>
 
-  
-  
-    
-  
+
+
+
+
   <tr class="resource">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       block_device_mapping[0]
     </td>
-    
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
   </tr>
-  
-  
-  
-    
+
+
+
+
   <tr class="cost-component">
     <td class="name">
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span class="arrow">&#8627;</span>
       Storage (general purpose SSD, gp3)
     </td>
-    
-      
+
+
         <td class="monthly-quantity">50</td>
-      
-      
+
+
         <td class="unit">GB</td>
-      
-      
-      
-      
+
+
+
+
         <td class="monthly-cost">$4.00</td>
-      
-    
+
+
   </tr>
 
-  
-  
 
-  
 
-  
 
-      
-        
-  
+
+
+
+
+
+
+
   <tr class="resource top-level">
     <td class="name">
-      
-      
+
+
       module.vpc.module.vpc.aws_cloudwatch_log_group.flow_log[0]
     </td>
-    
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
   </tr>
-  
+
     <tr class="tags">
       <td class="name">
-        
-        
-          
-          
-        
-          
-          
-        
+
+
+
+
+
+
+
+
         <span class="label">Tags:</span>
         <span>Environment=prod, Name=prod-skaf-vpc</span>
       </td>
-      
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
     </tr>
-  
-  
-  
-    
+
+
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       Data ingested
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.50 per GB</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       Archival Storage
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.03 per GB</td>
-    
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       Insights queries data scanned
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.005 per GB</td>
-    
+
   </tr>
 
-  
-  
 
-      
-        
-  
+
+
+
+
+
   <tr class="resource top-level">
     <td class="name">
-      
-      
+
+
       module.vpc.module.vpc.aws_nat_gateway.this[0]
     </td>
-    
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
   </tr>
-  
+
     <tr class="tags">
       <td class="name">
-        
-        
-          
-          
-        
-          
-          
-        
+
+
+
+
+
+
+
+
         <span class="label">Tags:</span>
         <span>Environment=prod, Name=prod-skaf-nat</span>
       </td>
-      
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
     </tr>
-  
-  
-  
-    
+
+
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       NAT gateway
     </td>
-    
-      
+
+
         <td class="monthly-quantity">730</td>
-      
-      
+
+
         <td class="unit">hours</td>
-      
-      
-      
-      
+
+
+
+
         <td class="monthly-cost">$32.85</td>
-      
-    
+
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       Data processed
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.045 per GB</td>
-    
+
   </tr>
 
-  
-  
 
-      
-        
-  
+
+
+
+
+
   <tr class="resource top-level">
     <td class="name">
-      
-      
+
+
       module.vpc.module.vpc.aws_nat_gateway.this[1]
     </td>
-    
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
   </tr>
-  
+
     <tr class="tags">
       <td class="name">
-        
-        
-          
-          
-        
-          
-          
-        
+
+
+
+
+
+
+
+
         <span class="label">Tags:</span>
         <span>Environment=prod, Name=prod-skaf-nat</span>
       </td>
-      
-  
+
+
     <td class="monthly-quantity"></td>
-  
-  
+
+
     <td class="unit"></td>
-  
-  
-  
-  
+
+
+
+
     <td class="monthly-cost"></td>
-  
+
 
     </tr>
-  
-  
-  
-    
+
+
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       NAT gateway
     </td>
-    
-      
+
+
         <td class="monthly-quantity">730</td>
-      
-      
+
+
         <td class="unit">hours</td>
-      
-      
-      
-      
+
+
+
+
         <td class="monthly-cost">$32.85</td>
-      
-    
+
+
   </tr>
 
-  
-    
+
+
   <tr class="cost-component">
     <td class="name">
-      
+
       <span class="arrow">&#8627;</span>
       Data processed
     </td>
-    
+
       <td colspan="3" class="usage-cost">Cost depends on usage: $0.045 per GB</td>
-    
+
   </tr>
 
-  
-  
 
-      
+
+
+
       <tr class="total">
         <td class="name" colspan="3">Project total</td>
         <td class="monthly-cost">$199.70</td>
@@ -1167,7 +1167,7 @@ iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAMAAABlApw1AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7O
     </tbody>
   </table>
 
-    
+
 
     <table class="overall-total">
       <tbody>

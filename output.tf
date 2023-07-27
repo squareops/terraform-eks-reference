@@ -72,4 +72,3 @@ output "kms_policy_arn" {
   description = "ARN of KMS policy"
   value       = module.eks.kms_policy_arn
 }
-

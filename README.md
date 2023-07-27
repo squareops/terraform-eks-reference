@@ -63,27 +63,21 @@ No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+No providers.
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_eks"></a> [eks](#module\_eks) | squareops/eks/aws | 1.0.3 |
-| <a name="module_eks_bootstrap"></a> [eks\_bootstrap](#module\_eks\_bootstrap) | squareops/eks-bootstrap/aws | 1.1.0 |
+| <a name="module_eks"></a> [eks](#module\_eks) | squareops/eks/aws | 3.1.0 |
 | <a name="module_key_pair_eks"></a> [key\_pair\_eks](#module\_key\_pair\_eks) | squareops/keypair/aws | 1.0.2 |
 | <a name="module_key_pair_vpn"></a> [key\_pair\_vpn](#module\_key\_pair\_vpn) | squareops/keypair/aws | 1.0.2 |
-| <a name="module_managed_node_group_production"></a> [managed\_node\_group\_production](#module\_managed\_node\_group\_production) | squareops/eks/aws//modules/managed-nodegroup | 1.0.3 |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | squareops/vpc/aws | 2.1.0 |
+| <a name="module_managed_node_group_production"></a> [managed\_node\_group\_production](#module\_managed\_node\_group\_production) | squareops/eks/aws//modules/managed-nodegroup | 3.1.0 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | squareops/vpc/aws | 3.3.0 |
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [aws_eks_cluster.cluster](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/eks_cluster) | data source |
-| [aws_eks_cluster_auth.cluster](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/eks_cluster_auth) | data source |
+No resources.
 
 ## Inputs
 
@@ -98,10 +92,8 @@ No inputs.
 | <a name="output_cluster_oidc_issuer_url"></a> [cluster\_oidc\_issuer\_url](#output\_cluster\_oidc\_issuer\_url) | The URL on the EKS cluster for the OpenID Connect identity provider |
 | <a name="output_cluster_security_group_id"></a> [cluster\_security\_group\_id](#output\_cluster\_security\_group\_id) | Security group IDs attached to the cluster control plane |
 | <a name="output_database_subnets"></a> [database\_subnets](#output\_database\_subnets) | List of IDs of Database Subnets |
-| <a name="output_efs_id"></a> [efs\_id](#output\_efs\_id) | The ID of the EFS |
 | <a name="output_intra_subnets"></a> [intra\_subnets](#output\_intra\_subnets) | List of IDs of Intra Subnets |
 | <a name="output_kms_policy_arn"></a> [kms\_policy\_arn](#output\_kms\_policy\_arn) | ARN of KMS policy |
-| <a name="output_nginx_ingress_controller_dns_hostname"></a> [nginx\_ingress\_controller\_dns\_hostname](#output\_nginx\_ingress\_controller\_dns\_hostname) | NGINX Ingress Controller DNS Hostname |
 | <a name="output_private_subnets"></a> [private\_subnets](#output\_private\_subnets) | List of IDs of Private Subnets |
 | <a name="output_public_subnets"></a> [public\_subnets](#output\_public\_subnets) | List of IDs of Public Subnets |
 | <a name="output_vpc_cidr_block"></a> [vpc\_cidr\_block](#output\_vpc\_cidr\_block) | The CIDR block of VPC |

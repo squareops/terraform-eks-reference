@@ -15,7 +15,7 @@ data "terraform_remote_state" "eks" {
   config = {
     region = "us-east-2"
     bucket = "eks-ref-bucket"
-    key   = "eks/terraform.tfstate"
+    key    = "eks/terraform.tfstate"
   }
 }
 
