@@ -45,6 +45,13 @@ The [squareops/eks/aws](https://registry.terraform.io/modules/squareops/eks/aws/
 
 By using this module, AWS users can set up a kubernetes cluster on EKS in a simple, efficient, and reproducible manner. It also ensures that the EKS cluster is created with the best practices in mind, and that it is secured according to industry standards. The module is open source and maintained by [SquareOps](https://squareops.com/), a consulting company that specializes in cloud infrastructure and DevOps automation.
 
+### EKS-BOOTSTRAP
+
+The [squareops/eks-bootstrap/aws](https://registry.terraform.io/modules/squareops/eks-bootstrap/aws/latest) module available on the Terraform Registry is designed to bootstrap an EKS (Elastic Kubernetes Service) cluster in AWS (Amazon Web Services) with the necessary resources to run a kubernetes workload.
+
+The module provides a simplified and standardized way to create the kubernetes worker nodes in EKS, and to deploy the necessary add-ons and configurations to run kubernetes workloads. It automates the process of creating the necessary EKS resources.
+
+By using this module, AWS users can save time and ensure that their kubernetes workloads are deployed in a consistent and reproducible manner. It also ensures that the EKS cluster is created with the best practices in mind, and that it is secured according to industry standards. The module is open source and maintained by [SquareOps](https://squareops.com/), a consulting company that specializes in cloud infrastructure and DevOps automation.
 
 # terraform-eks-reference
 

@@ -7,23 +7,21 @@ module "key_pair_eks" {
 }
 
 module "eks" {
-  source                                  = "squareops/eks/aws"
-  depends_on                              = [module.vpc]
-  version                                 = "3.1.0"
-  name                                    = local.name
-  vpc_id                                  = module.vpc.vpc_id
-  environment                             = local.environment
-  ipv6_enabled                            = true
-  cluster_version                         = "1.26"
-  kms_key_arn                             = ""
-  cluster_log_types                       = ["api", "scheduler"]
-  private_subnet_ids                      = module.vpc.private_subnets
-  cluster_log_retention_in_days           = 30
-  cluster_endpoint_public_access          = true
-  cluster_endpoint_public_access_cidrs    = ["0.0.0.0/0"]
-  cluster_security_group_additional_rules = {}
-
-  create_aws_auth_configmap = true
+  source                               = "squareops/eks/aws"
+  depends_on                           = [module.vpc]
+  version                              = "3.1.0"
+  name                                 = local.name
+  vpc_id                               = module.vpc.vpc_id
+  environment                          = local.environment
+  ipv6_enabled                         = true
+  cluster_version                      = "1.26"
+  kms_key_arn                          = ""
+  cluster_log_types                    = ["api", "scheduler"]
+  private_subnet_ids                   = module.vpc.private_subnets
+  cluster_log_retention_in_days        = 30
+  cluster_endpoint_public_access       = true
+  cluster_endpoint_public_access_cidrs = ["0.0.0.0/0"]
+  create_aws_auth_configmap            = true
   aws_auth_users = [
     {
       userarn  = "arn:aws:iam::272222598:user/name"
@@ -36,6 +34,16 @@ module "eks" {
       groups   = ["system:masters"]
     }
   ]
+  additional_rules = {
+    ingress_port_mgmt_tcp = {
+      description = "mgmt vpc cidr"
+      protocol    = "tcp"
+      from_port   = 443
+      to_port     = 443
+      type        = "ingress"
+      cidr_blocks = ["172.10.0.0/16"]
+    }
+  }
 }
 
 module "managed_node_group_production" {
