@@ -13,6 +13,7 @@ module "eks" {
   name                                 = local.name
   vpc_id                               = module.vpc.vpc_id
   environment                          = local.environment
+  ipv6_enabled                         = true
   cluster_version                      = "1.26"
   kms_key_arn                          = ""
   cluster_log_types                    = ["api", "scheduler"]
