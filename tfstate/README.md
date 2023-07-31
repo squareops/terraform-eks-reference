@@ -51,7 +51,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_backend"></a> [backend](#module\_backend) | squareops/tfstate/aws | 1.0.0 |
+| <a name="module_backend"></a> [backend](#module\_backend) | squareops/tfstate/aws | 1.0.1 |
 
 ## Resources
 
