@@ -29,7 +29,7 @@ data "aws_eks_cluster_auth" "cluster" {
 
 module "eks_bootstrap" {
   source                                        = "squareops/eks-bootstrap/aws"
-  version                                       = "3.1.0"
+  version                                       = "3.1.1"
   name                                          = local.name
   environment                                   = local.environment
   eks_cluster_name                              = data.terraform_remote_state.eks.outputs.cluster_name
@@ -51,11 +51,11 @@ module "eks_bootstrap" {
   cert_manager_install_letsencrypt_http_issuers = true
   ingress_nginx_enabled                         = true
   internal_ingress_nginx_enabled                = true
-  efs_storage_class_enabled                     = false
+  efs_storage_class_enabled                     = true
   single_az_sc_config                           = [{ name = "infra-service-sc", zone = "us-east-2a" }]
-  kubeclarity_enabled                           = false
+  kubeclarity_enabled                           = true
   kubeclarity_hostname                          = "kubeclarity.squareops.in"
-  kubecost_enabled                              = false
+  kubecost_enabled                              = true
   kubecost_hostname                             = "kubecost.squareops.in"
   amazon_eks_aws_ebs_csi_driver_enabled         = true
   single_az_ebs_gp3_storage_class_enabled       = true
