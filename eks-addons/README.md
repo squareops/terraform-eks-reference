@@ -3,7 +3,7 @@
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-Prerequisite to deploy vpc and eks for eks-bootstrap deployement.
+No requirements.
 
 ## Providers
 
