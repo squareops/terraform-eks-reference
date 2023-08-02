@@ -1,7 +1,7 @@
 locals {
   region      = "us-east-2"
   environment = "prod"
-  name        = "vpc"
+  name        = "skaf"
   additional_aws_tags = {
     Owner      = "organization_name"
     Expires    = "Never"
@@ -22,10 +22,11 @@ module "key_pair_vpn" {
 
 module "vpc" {
   source                                          = "squareops/vpc/aws"
-  version                                         = "2.1.0"
+  version                                         = "3.3.0"
   name                                            = local.name
   vpc_cidr                                        = local.vpc_cidr
   environment                                     = local.environment
+  ipv6_enabled                                    = true
   availability_zones                              = 2
   intra_subnet_enabled                            = true
   public_subnet_enabled                           = true

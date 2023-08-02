@@ -1,0 +1,29 @@
+pipeline {
+  agent any
+
+  environment {
+                INFRACOST_API_KEY = credentials('jenkins-infracost-api-key')
+                AWS_REGION = 'us-east-2'
+  }
+  stages {
+    stage('Build') {
+      steps {
+        sh '''
+        infracost breakdown --path . --format json --out-file infracost-eks.json
+        infracost breakdown --path . --format html --out-file infracost-eks.html
+
+
+        infracost breakdown --path eks-addons --format json --out-file infracost-eks-addons.json
+        infracost breakdown --path eks-addons --format html --out-file infracost-eks-addons.html
+
+
+        infracost output --path "infracost-*.json" --format json --out-file infracost-eks.json
+        '''
+        echo 'archive scan report'
+        archiveArtifacts artifacts: 'infracost-eks.json'
+        archiveArtifacts artifacts: 'infracost-eks.html'
+        archiveArtifacts artifacts: 'infracost-eks-addons.html'
+        }
+        }
+    }
+    }
